@@ -7,13 +7,13 @@
   "license": "MIT",
   "icon": "resources/logo.png",
   "repository": {
-    "url": "https://github.com/Infected-by-js/filediff-vscode",
+    "url": "https://github.com/scheron/filediff",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/Infected-by-js/filediff-vscode/issues"
+    "url": "https://github.com/scheron/filediff/issues"
   },
-  "homepage": "https://github.com/Infected-by-js/filediff-vscode#readme",
+  "homepage": "https://github.com/scheron/filediff#readme",
   "engines": {
     "vscode": "^1.90.0"
   },
