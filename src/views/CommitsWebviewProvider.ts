@@ -458,7 +458,7 @@ export class CommitsWebviewProvider implements vscode.WebviewViewProvider {
 
   private getDisplayFilePath(): string | undefined {
     if (!this.currentFilePath) {
-      return undefined;
+      return;
     }
 
     if (this.currentRepoRoot) {
@@ -486,7 +486,7 @@ export class CommitsWebviewProvider implements vscode.WebviewViewProvider {
     const activeEditor = vscode.window.activeTextEditor;
 
     if (!activeEditor) {
-      return undefined;
+      return;
     }
 
     const uri = activeEditor.document.uri;
@@ -498,8 +498,7 @@ export class CommitsWebviewProvider implements vscode.WebviewViewProvider {
     if (uri.scheme === 'filediff') {
       return this.getFilePathFromFileDiffUri(uri);
     }
-
-    return undefined;
+    return;
   }
 
   private getFilePathFromFileDiffUri(uri: vscode.Uri): string | undefined {

@@ -1,6 +1,6 @@
 export type FileChangeStatus = 'A' | 'M' | 'D' | 'R' | 'C' | '?';
 
-export interface FileCommit {
+export type FileCommit = {
   hash: string;
   shortHash: string;
   author: string;
@@ -11,10 +11,10 @@ export interface FileCommit {
   historyFilePath: string;
   previousFilePath?: string;
   repoRoot: string;
-}
+};
 
-export interface ActiveFileHistory {
+export type ActiveFileHistory = {
   filePath: string;
   repoRoot: string;
   commits: FileCommit[];
-}
+};

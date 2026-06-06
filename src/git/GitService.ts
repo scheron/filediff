@@ -14,7 +14,7 @@ export class GitService {
       const { stdout } = await this.git(['rev-parse', '--show-toplevel'], path.dirname(filePath));
       return stdout.trim() || undefined;
     } catch {
-      return undefined;
+      return;
     }
   }
 
@@ -22,7 +22,7 @@ export class GitService {
     const repoRoot = await this.getRepositoryRoot(filePath);
 
     if (!repoRoot) {
-      return undefined;
+      return;
     }
 
     const [resolvedRepoRoot, resolvedFilePath] = await Promise.all([
@@ -83,7 +83,7 @@ export class GitService {
     const [hash, shortHash, author, date, message] = headerLine.split(fieldSeparator);
 
     if (!hash || !shortHash) {
-      return undefined;
+      return;
     }
 
     const change = this.findRelevantChange(nameStatusLines, requestedFilePath);
