@@ -5,7 +5,7 @@
   "version": "0.0.11",
   "publisher": "InfectedByJs",
   "license": "MIT",
-  "icon": "./icon.png",
+  "icon": "resources/logo.png",
   "repository": {
     "url": "https://github.com/Infected-by-js/filediff-vscode",
     "type": "git"

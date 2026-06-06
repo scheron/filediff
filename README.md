@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="resources/logo.png" alt="FileDiff logo" width="96" height="96">
+</p>
+
 # FileDiff
 
 FileDiff shows the Git commit history for the file currently open in the editor and opens a diff for any selected commit.
@@ -10,18 +14,15 @@ FileDiff shows the Git commit history for the file currently open in the editor 
 - Support for added, modified, deleted, renamed, and copied file statuses.
 - Right-click menu to copy the commit hash or commit message.
 
+## Demo
+
+![FileDiff demo](resources/demo.gif)
+
 ## Usage
 
 1. Open a file inside a Git repository.
 2. Open the FileDiff view from the Activity Bar.
 3. Select a commit to open the file diff for that commit.
-4. Right-click a commit to copy its hash or message.
-
-The diff compares:
-
-```text
-commit^ -> commit
-```
 
 ## Requirements
 
@@ -33,7 +34,3 @@ commit^ -> commit
 - Text files are the primary target.
 - Binary file contents are shown as unsupported.
 - Merge commits are compared against the first parent.
-
-## Release Notes
-
-See [CHANGELOG.md](CHANGELOG.md).
