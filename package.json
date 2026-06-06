@@ -2,7 +2,7 @@
   "name": "filediff",
   "displayName": "FileDiff",
   "description": "Show Git commit history for the active file and open per-commit diffs.",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "publisher": "InfectedByJs",
   "license": "MIT",
   "icon": "resources/logo.png",
