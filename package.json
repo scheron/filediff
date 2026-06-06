@@ -2,7 +2,7 @@
   "name": "filediff",
   "displayName": "Git File History List",
   "description": "View the current file's history in a dedicated sidebar and open diffs from the commit list.",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "publisher": "InfectedByJs",
   "license": "MIT",
   "icon": "resources/logo.png",

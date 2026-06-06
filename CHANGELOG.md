@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.0.13
+
+- Rename the sidebar and extension branding to focus on file history.
+- Rework the public text to emphasize the commit list for the active file.
+
 ## 0.0.11
 
 - Preserve the active file history when opening diffs for files that were renamed.
