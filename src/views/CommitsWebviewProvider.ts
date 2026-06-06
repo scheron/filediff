@@ -22,7 +22,7 @@ export class CommitsWebviewProvider implements vscode.WebviewViewProvider {
 
   resolveWebviewView(webviewView: vscode.WebviewView): void {
     this.view = webviewView;
-    webviewView.title = 'Commits';
+    webviewView.title = 'History';
     webviewView.webview.options = { enableScripts: true };
     webviewView.webview.onDidReceiveMessage((message: {
       command?: string;
@@ -108,7 +108,7 @@ export class CommitsWebviewProvider implements vscode.WebviewViewProvider {
       return;
     }
 
-    this.view.title = 'Commits';
+    this.view.title = 'History';
     this.view.webview.html = this.getHtml(this.view.webview);
   }
 
@@ -122,7 +122,7 @@ export class CommitsWebviewProvider implements vscode.WebviewViewProvider {
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource} 'unsafe-inline'; script-src 'nonce-${nonce}';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commits</title>
+  <title>History</title>
   <style>
     * {
       box-sizing: border-box;

@@ -1,7 +1,7 @@
 {
   "name": "filediff",
-  "displayName": "FileDiff",
-  "description": "Show Git commit history for the active file and open per-commit diffs.",
+  "displayName": "Git File History List",
+  "description": "View the current file's history in a dedicated sidebar and open diffs from the commit list.",
   "version": "0.0.12",
   "publisher": "InfectedByJs",
   "license": "MIT",
@@ -55,7 +55,7 @@
       "activitybar": [
         {
           "id": "filediff",
-          "title": "FileDiff",
+          "title": "File History",
           "icon": "resources/filediff.svg"
         }
       ]
@@ -65,7 +65,7 @@
         {
           "type": "webview",
           "id": "filediff.commits",
-          "name": "Commits"
+          "name": "History"
         }
       ]
     },

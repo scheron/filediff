@@ -10,7 +10,7 @@
 
 - Add a right-click commit menu for copying commit hashes and commit messages.
 - Refine the commit list into a compact native-feeling view.
-- Keep commit history context while viewing FileDiff virtual diffs.
+- Keep commit history context while viewing virtual diffs.
 
 ## 0.0.1
 

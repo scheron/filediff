@@ -1,28 +1,29 @@
 <p align="center">
-  <img src="resources/logo.png" alt="FileDiff logo" width="96" height="96">
+  <img src="resources/logo.png" alt="Git File History List logo" width="96" height="96">
 </p>
 
-# FileDiff
+# Git File History List
 
-FileDiff shows the Git commit history for the file currently open in the editor and opens a diff for any selected commit.
+View the current file's history in a dedicated sidebar. Open diffs directly from the commit list.
 
 ## Features
 
-- Activity Bar view for the active file's Git history.
-- Commit list scoped to the current file.
+- View the current file's commit history from a sidebar list.
+- Keep the commit list scoped to the active file.
 - Per-commit file diff using VS Code's built-in diff editor.
 - Support for added, modified, deleted, renamed, and copied file statuses.
-- Right-click menu to copy the commit hash or commit message.
+- Commit actions for hashes and messages.
 
 ## Demo
 
-![FileDiff demo](resources/demo.gif)
+![Git File History List demo](resources/demo.gif)
 
 ## Usage
 
 1. Open a file inside a Git repository.
-2. Open the FileDiff view from the Activity Bar.
+2. Open the File History view from the Activity Bar.
 3. Select a commit to open the file diff for that commit.
+4. Open the context menu on a commit for hash and message actions.
 
 ## Requirements
 
