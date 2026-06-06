@@ -11,6 +11,7 @@ export async function openFileAtCommit(commit: FileCommit): Promise<void> {
     commit: commit.hash,
     side: 'after',
     status: commit.status,
+    historyFilePath: encodeURIComponent(commit.historyFilePath),
     repoRoot: encodeURIComponent(commit.repoRoot)
   });
   const uri = vscode.Uri.from({

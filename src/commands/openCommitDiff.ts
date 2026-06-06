@@ -15,6 +15,7 @@ function buildFileDiffUri(commit: FileCommit, side: 'before' | 'after'): vscode.
     commit: commit.hash,
     side,
     status: commit.status,
+    historyFilePath: encodeURIComponent(commit.historyFilePath),
     repoRoot: encodeURIComponent(commit.repoRoot)
   });
 

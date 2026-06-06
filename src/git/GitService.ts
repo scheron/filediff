@@ -96,6 +96,7 @@ export class GitService {
       message: message ?? '',
       status: change.status,
       filePath: change.filePath,
+      historyFilePath: requestedFilePath,
       previousFilePath: change.previousFilePath,
       repoRoot
     };

@@ -3,16 +3,16 @@ import { openCommitDiff } from './commands/openCommitDiff';
 import { openFileAtCommit } from './commands/openFileAtCommit';
 import { GitFileContentProvider } from './documents/GitFileContentProvider';
 import { GitService } from './git/GitService';
-import { CommitsTreeProvider } from './views/CommitsTreeProvider';
+import { CommitsWebviewProvider } from './views/CommitsWebviewProvider';
 
 export function activate(context: vscode.ExtensionContext): void {
   const gitService = new GitService();
-  const commitsProvider = new CommitsTreeProvider(gitService);
+  const commitsProvider = new CommitsWebviewProvider(context, gitService);
   const contentProvider = new GitFileContentProvider(gitService);
 
   context.subscriptions.push(
     vscode.workspace.registerTextDocumentContentProvider('filediff', contentProvider),
-    vscode.window.registerTreeDataProvider('filediff.commits', commitsProvider),
+    vscode.window.registerWebviewViewProvider('filediff.commits', commitsProvider),
     vscode.commands.registerCommand('filediff.refresh', () => commitsProvider.refresh()),
     vscode.commands.registerCommand('filediff.openCommitDiff', openCommitDiff),
     vscode.commands.registerCommand('filediff.openFileAtCommit', openFileAtCommit),

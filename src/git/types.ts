@@ -8,6 +8,7 @@ export interface FileCommit {
   message: string;
   status: FileChangeStatus;
   filePath: string;
+  historyFilePath: string;
   previousFilePath?: string;
   repoRoot: string;
 }
