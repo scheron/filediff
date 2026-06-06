@@ -1,0 +1,87 @@
+{
+  "name": "filediff-extension",
+  "displayName": "FileDiff",
+  "description": "Show Git commit history for the active file and open per-commit diffs.",
+  "version": "0.0.3",
+  "publisher": "infectedbyjs",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:filediff.commits",
+    "onCommand:filediff.refresh",
+    "onCommand:filediff.openCommitDiff",
+    "onCommand:filediff.openFileAtCommit"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "filediff.refresh",
+        "title": "Refresh File Commits",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "filediff.openCommitDiff",
+        "title": "Open Commit Diff"
+      },
+      {
+        "command": "filediff.openFileAtCommit",
+        "title": "Open File at Commit"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "filediff",
+          "title": "FileDiff",
+          "icon": "resources/filediff.svg"
+        }
+      ]
+    },
+    "views": {
+      "filediff": [
+        {
+          "id": "filediff.commits",
+          "name": "Commits"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "filediff.refresh",
+          "when": "view == filediff.commits",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "filediff.openCommitDiff",
+          "when": "view == filediff.commits && viewItem == commit",
+          "group": "inline"
+        },
+        {
+          "command": "filediff.openFileAtCommit",
+          "when": "view == filediff.commits && viewItem == commit",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "package": "vsce package",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^3.9.2",
+    "typescript": "^5.4.5"
+  }
+}
