@@ -1,18 +1,19 @@
 {
-  "name": "filediff-extension",
+  "name": "filediff",
   "displayName": "FileDiff",
   "description": "Show Git commit history for the active file and open per-commit diffs.",
   "version": "0.0.11",
-  "publisher": "infectedbyjs",
-  "license": "SEE LICENSE IN LICENSE",
+  "publisher": "InfectedByJs",
+  "license": "MIT",
+  "icon": "./icon.png",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/infectedbyjs/filediff-extension.git"
+    "url": "https://github.com/Infected-by-js/filediff-vscode",
+    "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/infectedbyjs/filediff-extension/issues"
+    "url": "https://github.com/Infected-by-js/filediff-vscode/issues"
   },
-  "homepage": "https://github.com/infectedbyjs/filediff-extension#readme",
+  "homepage": "https://github.com/Infected-by-js/filediff-vscode#readme",
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -33,7 +34,7 @@
     "onCommand:filediff.openCommitDiff",
     "onCommand:filediff.openFileAtCommit"
   ],
-  "main": "./out/extension.js",
+  "main": "./out/extension",
   "contributes": {
     "commands": [
       {
