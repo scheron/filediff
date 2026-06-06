@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.14
+
+- Refresh the File History sidebar icon.
+
 ## 0.0.13
 
 - Rename the sidebar and extension branding to focus on file history.
